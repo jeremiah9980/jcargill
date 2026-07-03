@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cargill</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      background: #0f0f13;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem;
+    }
+
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #9ca3af;
+    }
+
+    .cards {
+      display: flex;
+      flex: 1;
+      gap: 2rem;
+      padding: 1.5rem 3rem 3rem;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .card {
+      flex: 1;
+      max-width: 520px;
+      background: #1a1a24;
+      border: 1px solid #2d2d3d;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+      border-color: #5b5bff;
+    }
+
+    .card-preview {
+      position: relative;
+      width: 100%;
+      padding-top: 62.5%; /* 8:5 aspect ratio */
+      background: #11111a;
+      overflow: hidden;
+    }
+
+    .card-preview iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      transform-origin: top left;
+      border: none;
+      pointer-events: none;
+    }
+
+    .card-preview .preview-overlay {
+      position: absolute;
+      inset: 0;
+      background: transparent;
+    }
+
+    .card-body {
+      padding: 1.5rem 1.75rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      flex: 1;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7c7cff;
+    }
+
+    .card-name {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      line-height: 1.55;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .card-link:hover {
+      color: #ffffff;
+    }
+
+    .card-link svg {
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 680px) {
+      .cards {
+        flex-direction: column;
+        padding: 1rem 1.25rem 2rem;
+        align-items: center;
+      }
+
+      .card {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cargill</h1>
+    <p>Explore our professional portfolios</p>
+  </header>
+
+  <main class="cards">
+
+    <!-- Jesica — Left -->
+    <a class="card" href="https://jeremiah9980.github.io/jesicacargill/" target="_blank" rel="noopener noreferrer" aria-label="Visit Jesica Cargill's professional site">
+      <div class="card-preview">
+        <iframe
+          src="https://jeremiah9980.github.io/jesicacargill/"
+          title="Jesica Cargill's site preview"
+          scrolling="no"
+          loading="lazy"
+          tabindex="-1"
+          aria-hidden="true">
+        </iframe>
+        <div class="preview-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Portfolio</span>
+        <span class="card-name">Jesica Cargill</span>
+        <span class="card-desc">Jesica's professional portfolio — work, projects, and more.</span>
+        <span class="card-link">
+          Visit site
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </span>
+      </div>
+    </a>
+
+    <!-- Jeremiah — Right -->
+    <a class="card" href="https://jeremiah9980.github.io/jeremiah9980.2/" target="_blank" rel="noopener noreferrer" aria-label="Visit Jeremiah's professional site">
+      <div class="card-preview">
+        <iframe
+          src="https://jeremiah9980.github.io/jeremiah9980.2/"
+          title="Jeremiah's site preview"
+          scrolling="no"
+          loading="lazy"
+          tabindex="-1"
+          aria-hidden="true">
+        </iframe>
+        <div class="preview-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Portfolio</span>
+        <span class="card-name">Jeremiah Cargill</span>
+        <span class="card-desc">Jeremiah's professional portfolio — work, projects, and more.</span>
+        <span class="card-link">
+          Visit site
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </span>
+      </div>
+    </a>
+
+  </main>
+
+</body>
+</html>
